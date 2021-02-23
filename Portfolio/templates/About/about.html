@@ -1,0 +1,29 @@
+{% extends 'layouts.html' %}
+
+{% block title %}
+About Page
+{% endblock %}
+
+{% block content %}<br><br><br>
+    <section id="about-us" class="about-us">
+      <div class="container" data-aos="fade-up">
+          <div class="section-title">
+          <h2>ABOUT</h2>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6" data-aos="fade-right">
+            <h2>{{ about.title }}</h2>
+            <img src="{{ about.image.url }}" style="height: 300px; width: 480px;">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left">
+            <p style="font-size: 18px;">
+              {{ about.description }}
+                {{ about.description }}
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+{% endblock %}

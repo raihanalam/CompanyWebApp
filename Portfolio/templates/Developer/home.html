@@ -1,0 +1,52 @@
+{% extends 'layouts.html' %}
+{% load static %}
+{% block title %}
+Developers Home Page
+{% endblock %}
+
+{% block content %}
+    {% load static %}
+    <br><br><br><br><br>
+    <div class="container">
+        <div class="row justify-content-center" data-aos="fade-up">
+            <div class="col-6">
+                <h4 style="text-align: center">Shout a geek:</h4>
+                <form action="" method="post" role="form" class="python-email-form">
+                    {% csrf_token %}
+                    <div class="row-1">
+                        <div class="form-group mt-3">
+                            <input type="text" name ="topic" rows="3" placeholder="Topic" required></textarea>
+                        </div>
+                        <div class="form-group mt-3">
+                            <textarea class="form-control" name="geekpost" rows="5" placeholder="Place your geek..." required></textarea>
+                        </div>
+                        <div class="text-center mt-3">
+                          <button type="submit" class="btn btn-success">Send Geek</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <br><br>
+        <div class="last-geek">
+            <h4 style="text-align: center">Latest Geeks</h4>
+            {% with i = 0 %}
+            {% while i < 5: %}
+            <div class="row">
+                 <div class="col">
+                     <p>{{ geek.geekpost }}</p>
+                     <small>Topic: {{ geek.topic }} </small><small>| By: {{ geek.geekedby }}</small><small> | Time: {{ geek.geektime}}</small>
+                 </div>
+            </div>
+            <br>
+            {% i += 1 %}
+            {% endwhile %}
+            <div class="text-center mt-3">
+                <button type="reset" class="btn btn-danger">Refresh</button>
+            </div>
+        <br><br>
+
+        </div>
+
+    </div>
+{% endblock %}

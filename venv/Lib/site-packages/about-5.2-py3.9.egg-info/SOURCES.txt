@@ -1,0 +1,14 @@
+.gitignore
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+about/Trove-classifiers.txt
+about/__init__.py
+about/about.py
+about.egg-info/PKG-INFO
+about.egg-info/SOURCES.txt
+about.egg-info/dependency_links.txt
+about.egg-info/pbr.json
+about.egg-info/requires.txt
+about.egg-info/top_level.txt

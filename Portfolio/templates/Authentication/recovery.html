@@ -1,0 +1,39 @@
+{% extends 'layouts.html' %}
+{% load static %}
+
+{% block title %}
+Password Recovery
+{% endblock %}
+
+{% block content %}
+<!-- ======= Login Section ======= -->
+    {% load static %}
+    <br><br><br>
+    <section id="contact" class="contact">
+      <div class="container">
+          <h3 style="text-align: center;">Recover Your Account</h3>
+
+        <div class="row justify-content-center" data-aos="fade-up">
+
+        <div class="row mt-5 justify-content-center" data-aos="fade-up">
+          <div class="col-lg-5">
+            <form action="" method="post" role="form" class="python-email-form">
+                {% csrf_token %}
+              <div class="row">
+                <div class="form-group mt-3 mt-md-3">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                </div>
+              </div>
+
+                <div class="row">
+                    <div class="text-center mt-3"><button type="submit" class="btn btn-success">Send Recovery Email</button></div>
+                </div>
+                <small>Havn't any account? <a href="{% url 'registration' %}">Register</a> </small>
+            </form>
+          </div>
+        </div>
+
+      </div>
+      </div>
+    </section><!-- End Contact Section -->
+{% endblock %}
