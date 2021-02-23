@@ -30,8 +30,8 @@ Developers Home Page
         <br><br>
         <div class="last-geek">
             <h4 style="text-align: center">Latest Geeks</h4>
-            {% with i = 0 %}
-            {% while i < 5: %}
+
+            {% for geek in geek.data %}
             <div class="row">
                  <div class="col">
                      <p>{{ geek.geekpost }}</p>
@@ -39,8 +39,7 @@ Developers Home Page
                  </div>
             </div>
             <br>
-            {% i += 1 %}
-            {% endwhile %}
+            {% endfor %}
             <div class="text-center mt-3">
                 <button type="reset" class="btn btn-danger">Refresh</button>
             </div>
